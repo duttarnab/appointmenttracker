@@ -48,7 +48,7 @@ module.exports = {
           //getting all distribution groups
 
           let distributionGroupsResponse = await axios.get(
-            'https://graph.microsoft.com/v1.0/groups?$select=id,displayName,mail&$orderby=displayName&$top=950',
+            'https://graph.microsoft.com/v1.0/groups?$select=id,displayName,mail&$orderby=displayName&$top=500',
             { headers: { Authorization: `Bearer ${token}` }});
           
           let distributionGroups = await distributionGroupsResponse.data.value;
